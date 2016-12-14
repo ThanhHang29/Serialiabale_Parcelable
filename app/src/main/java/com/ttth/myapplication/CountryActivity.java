@@ -23,7 +23,8 @@ public class CountryActivity extends Activity {
     private void initView() {
         // recceive data
         Intent intent = getIntent();
-        Country seriCountry = (Country) intent.getSerializableExtra(MainActivity.KEY_COUNTRY);
+//        Country seriCountry = (Country) intent.getSerializableExtra(MainActivity.KEY_COUNTRY);
+        CountryWithParcelable seriCountry = intent.getParcelableExtra(CountryParcelableActivity.KEY_COUNTRY);
         Log.e(TAG,""+seriCountry);
         tvItemCountry = (TextView) this.findViewById(R.id.tvItemcountry);
         tvItemCountry.setText("Country: "+seriCountry.getName()+"\n"
